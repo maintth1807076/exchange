@@ -1,8 +1,8 @@
 <div class="schedule">
   <div class="schedule__tabs">
-    <a routerLink="/order/open-order" class="schedule__tab">Lệnh chờ</a>
-    <a routerLink="/order/order-history" class="schedule__tab">Lịch sử đặt lệnh</a>
-    <a routerLink="/order/trade-history" class="schedule__tab">Lịch sử giao dịch</a></div>
+    <a routerLink="/order/open-order" class="schedule__tab" [ngClass]="{'schedule__tab--selected': isActiveTab('/order/open-order')}">Lệnh chờ</a>
+    <a routerLink="/order/order-history" class="schedule__tab" [ngClass]="{'schedule__tab--selected': isActiveTab('/order/order-history')}">Lịch sử đặt lệnh</a>
+    <a routerLink="/order/trade-history" class="schedule__tab" [ngClass]="{'schedule__tab--selected': isActiveTab('/order/trade-history')}">Lịch sử giao dịch</a></div>
   <router-outlet></router-outlet>
   <div class="schedule__more"> <a href="#">Tải thêm</a></div>
   <div class="schedule__more">Không có thêm dữ liệu</div>

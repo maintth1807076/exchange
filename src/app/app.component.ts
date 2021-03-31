@@ -22,8 +22,4 @@ export class AppComponent implements AfterViewInit{
       document.body.appendChild(scriptElement);
     });
   }
-  // "src/assets/js/vendor/jquery.min.js",
-  // "src/assets/js/vendor/jquery.validate.min.js",
-  // "src/assets/js/vendor/jquery.circlechart.js",
-  // "src/assets/js/common.js"
 }

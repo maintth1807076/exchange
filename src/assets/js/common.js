@@ -277,19 +277,6 @@ var Stock = function (options) {
         });
     };
 
-    this.scheduleTabSelect = function () {
-      var $tabList = $('.schedule__tab');
-      $tabList.on('click', function (event) {
-        $tabList.each(function () {
-          if($(this).attr('routerLink') === window.location.pathname ) {
-            $(this).addClass('schedule__tab--selected');
-          } else {
-            $(this).removeClass('schedule__tab--selected');
-          }
-        })
-      });
-    };
-
     this.login();
     this.register();
     this.customSelect();
@@ -297,7 +284,6 @@ var Stock = function (options) {
     this.handleExchange();
     this.handleSchedule();
     this.toggleMenuAside();
-    this.scheduleTabSelect();
 };
 
 $(document).ready(function () {
