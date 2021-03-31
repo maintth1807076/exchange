@@ -1,0 +1,288 @@
+<section data-action="buy" class="exchange">
+  <div class="exchange__header"> <a href="#" data-control="aside"> <span class="material-icons">swap_horiz </span></a><span class="exchange__type">TRX/USDT</span><span class="exchange__plus">+4,58% </span></div>
+  <div class="exchange__content">
+    <div class="exchange__statistics">
+      <div class="exchange__table">
+        <div class="exchange__row exchange__row--header">
+          <div class="exchange__cell">Giá <br />(USDT)</div>
+          <div class="exchange__cell">Số lượng <br />(TRX)</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__subtract">0,05397</div>
+          <div class="exchange__cell">101.084,2</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__subtract">0,05396</div>
+          <div class="exchange__cell">22.715,1</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__subtract">0,05395</div>
+          <div class="exchange__cell">60.744,0</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__subtract">0,05394</div>
+          <div class="exchange__cell">53.481,5</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__subtract">0,05393</div>
+          <div class="exchange__cell">48.455,5</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__subtract">0,05392</div>
+          <div class="exchange__cell">122.236,2</div>
+        </div>
+      </div>
+      <div class="exchange__result">
+        <div class="exchange__plus">0,05392</div>
+        <div class="exchange__ratio">≈ 0,053920 $</div>
+      </div>
+      <div class="exchange__table">
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__plus">0,05391</div>
+          <div class="exchange__cell">100.000,0</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__plus">0,05390</div>
+          <div class="exchange__cell">178.549,4</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__plus">0,05389</div>
+          <div class="exchange__cell">21.455,5</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__plus">0,05388</div>
+          <div class="exchange__cell">38.396,3</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__plus">0,05387</div>
+          <div class="exchange__cell">67.068,6</div>
+        </div>
+        <div class="exchange__row">
+          <div class="exchange__cell exchange__plus">0,05386</div>
+          <div class="exchange__cell">66.904,5</div>
+        </div>
+      </div>
+      <div class="exchange__convert">
+        <select name="percentage" class="exchange__select">
+          <option value="0.00001">0.00001</option>
+          <option value="0.00002">0.00002</option>
+          <option value="0.00003">0.00003</option>
+          <option value="0.00004">0.00004</option>
+        </select>
+        <button class="exchange__calculate"> <span class="material-icons">calculate</span></button>
+      </div>
+    </div>
+    <!--/.exchange__statistics-->
+
+    <div class="exchange__form">
+      <div class="exchange__tabs"> <a href="#" data-action="buy" class="exchange__tab exchange__tab--selected">Mua</a><a href="#" data-action="sell" class="exchange__tab">Bán</a></div>
+      <div class="exchange__group">
+        <select name="type" class="exchange__select">
+          <option value="1">Limit</option>
+          <option value="2">Market</option>
+          <option value="3">Stop Limit</option>
+          <option value="4">OCO</option>
+        </select>
+      </div>
+      <div class="exchange__group">
+        <div class="exchange__control">
+          <div class="exchange__decrement"><span class="material-icons">remove</span></div>
+          <input placeholder="Giá" type="number" name="price" min="0" class="exchange__number" />
+          <div class="exchange__increment"><span class="material-icons">add</span></div>
+        </div>
+      </div>
+      <div class="exchange__group">
+        <div class="exchange__control">
+          <div class="exchange__decrement"><span class="material-icons">remove</span></div>
+          <input placeholder="Số lượng (TRX)" type="number" name="quantity" min="0" class="exchange__number" />
+          <div class="exchange__increment"><span class="material-icons">add</span></div>
+        </div>
+      </div>
+      <div class="exchange__ranges">
+        <label class="exchange__range">
+          <input type="radio" name="range" value="25" checked="true" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">25%</span>
+        </label>
+        <label class="exchange__range">
+          <input type="radio" name="range" value="50" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">50%</span>
+        </label>
+        <label class="exchange__range">
+          <input type="radio" name="range" value="75" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">75%</span>
+        </label>
+        <label class="exchange__range">
+          <input type="radio" name="range" value="100" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">100%</span>
+        </label>
+      </div>
+      <div class="exchange__group">
+        <input placeholder="Tổng (USDT)" type="number" name="total" class="exchange__number">
+      </div>
+      <div class="exchange__possible"><span>Khả dụng </span><span>
+
+                            409,309561 TRX <span class="material-icons">file_download</span></span></div>
+      <div class="exchange__handle">
+        <button class="exchange__submit">Mua TRX</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/.exchange-->
+<div class="schedule">
+  <div class="schedule__header"> <span>Lệnh chờ (2)</span><a routerLink="/order/open-order"><span class="material-icons">description</span></a></div>
+  <div class="schedule__control"> <a href="#schedule__list" class="schedule__toggle"><span class="material-icons">check_circle </span>Ẩn các cặp khác</a>
+    <button class="schedule__cancel">Hủy bỏ tất cả</button>
+  </div>
+  <div id="schedule__list" class="schedule__list">
+    <div class="schedule__item schedule__item--sell">
+      <div class="schedule__summary">
+        <div class="schedule__statistics">
+          <div class="schedule__type">Giới hạn bán </div>
+          <div data-percent="60" data-chart="circle" data-type="sell" class="schedule__chart"></div>
+        </div>
+        <div class="schedule__description">
+          <div class="schedule__titlte">TRX/USDT</div>
+          <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
+          </div>
+          <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
+        </div>
+      </div>
+      <div class="schedule__handle">
+        <div class="schedule__time">03-17 15:36:26</div>
+        <button class="schedule__cancel">Hủy bỏ</button>
+      </div>
+    </div>
+    <div class="schedule__item schedule__item--buy">
+      <div class="schedule__summary">
+        <div class="schedule__statistics">
+          <div class="schedule__type">Giới hạn mua </div>
+          <div data-percent="0" data-chart="circle" data-type="buy" class="schedule__chart"></div>
+        </div>
+        <div class="schedule__description">
+          <div class="schedule__titlte">TRX/USDT</div>
+          <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
+          </div>
+          <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
+        </div>
+      </div>
+      <div class="schedule__handle">
+        <div class="schedule__time">03-17 15:36:26</div>
+        <button class="schedule__cancel">Hủy bỏ</button>
+      </div>
+    </div>
+  </div>
+  <div class="schedule__empty"> <span class="material-icons">find_in_page</span><span>Không có lệnh</span></div>
+</div>
+<!--/.schedule-->
+<a href="#" data-control="aside" class="aside__cover"></a>
+<aside id="aside" class="aside">
+  <div class="aside__inner">
+    <div class="aside__heading"> <span>Thị trường</span><a href="#aside" data-control="aside" class="aside__close"> <span class="material-icons">close</span></a></div>
+    <div class="aside__search">
+      <label for="aside__input" class="aside__label"><span class="material-icons">search</span></label>
+      <input id="aside__input" type="text" name="keyword" class="aside__input">
+    </div>
+    <div class="aside__favorite"> <span>Danh sach yêu thích: </span><a href="#">BNB</a><a href="#">BTC</a><a href="#">ALTS</a><a href="#">FIAS</a></div>
+    <div class="aside__sort"><a href="#" class="sort__item sort__item--sorted sort__item--asc"><span>Tên</span></a>
+      <div class="aside__group"><a href="#" class="sort__item"><span>Giá gần nhất</span></a><a href="#" class="sort__item"><span>BĐ giá 24h</span></a></div>
+    </div>
+    <div class="aside__list">
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/XRP</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price">0,11122</div>
+          <div class="aside__rate aside__subtract">-0,18%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__plus">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">10x</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__subtract">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">10x</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__subtract">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">2x</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__subtract">0,0002321</div>
+          <div class="aside__rate aside__plus">+0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">10x</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__subtract">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">5x</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__plus">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__plus">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__plus">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__plus">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__plus">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+      <div class="aside__item">
+        <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span>
+        </div>
+        <div class="aside__detail">
+          <div class="aside__price aside__plus">0,0002321</div>
+          <div class="aside__rate aside__subtract">-0,19%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+<!--.aside-->
+
+

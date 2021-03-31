@@ -1,0 +1,11 @@
+<div class="schedule">
+  <div class="schedule__tabs">
+    <a routerLink="/order/open-order" class="schedule__tab">Lệnh chờ</a>
+    <a routerLink="/order/order-history" class="schedule__tab">Lịch sử đặt lệnh</a>
+    <a routerLink="/order/trade-history" class="schedule__tab">Lịch sử giao dịch</a></div>
+  <router-outlet></router-outlet>
+  <div class="schedule__more"> <a href="#">Tải thêm</a></div>
+  <div class="schedule__more">Không có thêm dữ liệu</div>
+  <div class="schedule__empty"> <span class="material-icons">find_in_page</span><span>Không có lệnh</span></div>
+</div>
+<!--/.schedule-->
