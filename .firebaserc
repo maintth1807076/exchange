@@ -1,11 +1,5 @@
 {
-  "targets": {
-    "angular-demo-0811": {
-      "hosting": {
-        "exchange": [
-          "angular-demo-0811"
-        ]
-      }
-    }
+  "projects": {
+    "default": "afgpaper-4e165"
   }
 }

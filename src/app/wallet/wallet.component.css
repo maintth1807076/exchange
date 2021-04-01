@@ -1,0 +1,102 @@
+body{
+  width: 25%;
+  color: white;
+  margin: auto;
+}
+.main{
+  background-color: black;
+}
+.price-title{
+  padding: 10px;
+  color: gray;
+}
+.header .price-text1{
+  font-size: 30px;
+  font-weight: 500;
+}
+.price-text{
+  padding: 10px;
+  padding-top: 0px !important;
+  display: flex;
+  align-items: center;
+}
+.header .price-text2{
+  color: gray;
+}
+.price-tomorow{
+  display: flex;
+  align-items: center;
+}
+.header .price-tomorow{
+  padding: 10px;
+  padding-top: 0px !important;
+  font-size: 25px;
+  color: green;
+}
+.right-icon{
+  font-size: 13px !important;
+}
+.header{
+  background-color: rgb(73, 80, 75);
+  padding-bottom: 5px;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+}
+button{
+  width: 30%;
+  height: 35px;
+  border-radius: 5px;
+}
+.yellow-button{
+  background-color: yellow;
+}
+.main-content{
+  padding-top: 15px;
+  margin-top: 5px;
+  background-color: rgb(73, 80, 75);
+
+}
+.top-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  background-color:red;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 40px;
+  border-radius: 5px;
+  margin: auto;
+}
+.top-main p{
+  color: yellow;
+}
+.main-list{
+  margin-left: -20px;
+}
+.main-list ul li{
+  list-style-type: none;
+}
+.icon img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.item{
+  display: flex;
+}
+.text-name{
+  margin-left: 20px;
+}
+.price-list{
+  margin-left: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.name-price2{
+  color: gray;
+  font-size: 12px;
+}

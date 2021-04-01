@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {AuthService} from "../service/auth.service";
+import {AngularFirestore} from "@angular/fire/firestore";
 
 @Component({
   selector: 'app-login',
@@ -7,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  formGroup: FormGroup;
+  list: any;
+  constructor(private service: AuthService, private formBuilder: FormBuilder, private afs: AngularFirestore) {
+    this.createForm();
+  }
 
   ngOnInit(): void {
   }
-
+  onSubmit(): void {
+    // this.afs.collection('users').valueChanges().subscribe(data => {
+    //   console.log(data);
+    //   this.list = data;
+    // })
+    // console.log(this.list)
+    this.service.login(this.formGroup.value);
+  }
+  createForm(): void {
+    this.formGroup = this.formBuilder.group({
+      email: '',
+      password: '',
+    });
+  }
 }

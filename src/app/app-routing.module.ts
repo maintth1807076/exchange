@@ -10,6 +10,7 @@ import {OrderComponent} from './order/order.component';
 import {OpenOrderComponent} from './order/open-order/open-order.component';
 import {OrderHistoryComponent} from './order/order-history/order-history.component';
 import {TradeHistoryComponent} from './order/trade-history/trade-history.component';
+import {WalletComponent} from './wallet/wallet.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'wallet', component: WalletComponent },
 ];
 
 @NgModule({

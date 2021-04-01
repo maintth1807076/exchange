@@ -4,14 +4,27 @@
 
 export const environment = {
   production: false,
+  // firebase: {
+  //   apiKey: 'AIzaSyDPd5Hi4eIrjohHS8do5VVgKLkoWkXkJzs',
+  //   authDomain: 'afgpaper-4e165.firebaseapp.com',
+  //   databaseURL: 'https://afgpaper-4e165.firebaseio.com',
+  //   projectId: 'afgpaper-4e165',
+  //   storageBucket: 'afgpaper-4e165.appspot.com',
+  //   messagingSenderId: '485254240382',
+  //   appId: '1:485254240382:web:c19f8e3b01a1d294e0202f',
+  //   measurementId: 'G-STZHG7S39X'
+  // }
   firebase: {
-    apiKey: 'AIzaSyCbXHKtnrlVPdT4yz5dAEYrPbbyONFcpjw',
-    authDomain: 'angular-demo-0811.firebaseapp.com',
-    projectId: 'angular-demo-0811',
-    storageBucket: 'angular-demo-0811.appspot.com',
-    messagingSenderId: '720177793061',
-    appId: '1:720177793061:web:f3cb231576167eec2b57cc'
+    apiKey: 'AIzaSyDPd5Hi4eIrjohHS8do5VVgKLkoWkXkJzs',
+    authDomain: 'afgpaper-4e165.firebaseapp.com',
+    databaseURL: 'https://afgpaper-4e165.firebaseio.com',
+    projectId: 'afgpaper-4e165',
+    storageBucket: 'afgpaper-4e165.appspot.com',
+    messagingSenderId: '485254240382',
+    appId: '1:485254240382:web:1a0c8e723f214700e0202f',
+    measurementId: 'G-XJTX259CMC'
   }
+
 };
 
 /*
