@@ -19,11 +19,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(): void {
-    // this.afs.collection('users').valueChanges().subscribe(data => {
-    //   console.log(data);
-    //   this.list = data;
-    // })
-    // console.log(this.list)
     this.service.login(this.formGroup.value);
   }
   createForm(): void {

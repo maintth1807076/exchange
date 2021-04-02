@@ -50,7 +50,7 @@ import {AuthService} from "./service/auth.service";
     AngularFirestoreModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {

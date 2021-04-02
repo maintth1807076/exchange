@@ -1,5 +1,12 @@
 import {AfterViewInit, Component} from '@angular/core';
 
+declare global {
+  interface Window {
+    tronWeb: any;
+    $: any;
+  }
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +14,18 @@ import {AfterViewInit, Component} from '@angular/core';
 })
 export class AppComponent implements AfterViewInit{
   title = 'exchange';
+  isAddress = '';
+  constructor() {
+    let getIsAddress = setInterval(async () => {
+      if (window.tronWeb !== undefined) {
+        if (window.tronWeb.defaultAddress.hex && window.tronWeb.defaultAddress.base58.length > 10) {
+          clearInterval(getIsAddress);
+          this.isAddress = window.tronWeb.defaultAddress.base58;
+        }
+      }
+    }, 50);
+  }
+
   async ngAfterViewInit(): Promise<void> {
     await this.loadScript('/assets/js/vendor/jquery.min.js');
     await this.loadScript('/assets/js/vendor/jquery.validate.min.js');

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../service/auth.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class RegisterComponent implements OnInit {
   formGroup: FormGroup;
 
-  constructor(private service: AuthService, private formBuilder: FormBuilder) {
+  constructor(private service: AuthService, private formBuilder: FormBuilder, private appComponent: AppComponent) {
     this.createForm();
   }
 
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.formGroup.patchValue({address: new Date().toString()});
+    this.formGroup.patchValue({address: this.appComponent.isAddress});
     this.service.register(this.formGroup.value);
   }
   createForm(): void {
