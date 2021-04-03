@@ -213,12 +213,10 @@ var Stock = function (options) {
             event.preventDefault();
             var $this = $(this);
             var action = $this.data('action');
-
             $tab.removeClass(classActive);
             $(this).addClass(classActive);
             $exchange.attr('data-action', action);
         });
-
         $submit.on('click', function () {
             var data = {
                 action: $exchange.data('action'),
@@ -227,8 +225,6 @@ var Stock = function (options) {
                 range: $exchange.find('[name="range"]').val(),
                 total: $exchange.find('[name="total"]').val()
             };
-
-            console.log(data);
         });
     };
 

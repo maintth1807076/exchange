@@ -74,27 +74,26 @@
     </div>
     <!--/.exchange__statistics-->
 
-    <div class="exchange__form">
-      <div class="exchange__tabs"> <a href="#" data-action="buy" class="exchange__tab exchange__tab--selected">Mua</a><a href="#" data-action="sell" class="exchange__tab">Bán</a></div>
+    <div class="exchange__form" [formGroup]="formGroup">
+      <div class="exchange__tabs"> <a href="#" data-action="buy" class="exchange__tab exchange__tab--selected">Mua</a>
+        <a href="#" data-action="sell" class="exchange__tab">Bán</a></div>
       <div class="exchange__group">
-        <select name="type" class="exchange__select">
-          <option value="1">Limit</option>
-          <option value="2">Market</option>
-          <option value="3">Stop Limit</option>
-          <option value="4">OCO</option>
+        <select name="typeJoint" class="exchange__select">
+          <option value="limit">Limit</option>
+          <option value="market">Market</option>
         </select>
       </div>
       <div class="exchange__group">
         <div class="exchange__control">
           <div class="exchange__decrement"><span class="material-icons">remove</span></div>
-          <input placeholder="Giá" type="number" name="price" min="0" class="exchange__number" />
+          <input placeholder="Giá" type="number" name="price" min="0" class="exchange__number" formControlName="price"/>
           <div class="exchange__increment"><span class="material-icons">add</span></div>
         </div>
       </div>
       <div class="exchange__group">
         <div class="exchange__control">
           <div class="exchange__decrement"><span class="material-icons">remove</span></div>
-          <input placeholder="Số lượng (TRX)" type="number" name="quantity" min="0" class="exchange__number" />
+          <input placeholder="Số lượng (TRX)" type="number" name="amount" min="0" class="exchange__number" formControlName="amount"/>
           <div class="exchange__increment"><span class="material-icons">add</span></div>
         </div>
       </div>
@@ -119,7 +118,7 @@
 
                             409,309561 TRX <span class="material-icons">file_download</span></span></div>
       <div class="exchange__handle">
-        <button class="exchange__submit">Mua TRX</button>
+        <button class="exchange__submit" (click)="onSubmit()">Mua TRX</button>
       </div>
     </div>
   </div>
