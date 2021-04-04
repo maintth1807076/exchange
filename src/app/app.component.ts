@@ -28,9 +28,9 @@ export class AppComponent implements AfterViewInit{
 
   async ngAfterViewInit(): Promise<void> {
     // await this.loadScript('/assets/js/vendor/jquery.min.js');
-    // await this.loadScript('/assets/js/vendor/jquery.validate.min.js');
-    // await this.loadScript('/assets/js/vendor/jquery.circlechart.js');
-    // await this.loadScript('/assets/js/common.js');
+    await this.loadScript('/assets/js/vendor/jquery.validate.min.js');
+    await this.loadScript('/assets/js/vendor/jquery.circlechart.js');
+    await this.loadScript('/assets/js/common.js');
   }
 
   loadScript(scriptUrl: string): Promise<any> {

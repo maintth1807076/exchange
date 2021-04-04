@@ -10,7 +10,8 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private URL_API_CREATE_USER = 'https://us-central1-afgpaper-4e165.cloudfunctions.net/createUser'
+  private URL_API_CREATE_USER = 'https://us-central1-afgpaper-4e165.cloudfunctions.net/createUser';
+  uid: string;
 
   constructor(private httpCLient: HttpClient, private afs: AngularFirestore, private router: Router) {
   }
@@ -26,6 +27,7 @@ export class AuthService {
   login(object): void {
     firebase.auth().signInWithEmailAndPassword(object.email, object.password)
       .then((userCredential) => {
+        this.getUid();
         this.router.navigate(['home']);
       })
       .catch((error) => {
@@ -42,13 +44,21 @@ export class AuthService {
 
   }
 
-  getUid(): string {
-    // console.log(firebase.auth().currentUser.uid);
-    // return firebase.auth().currentUser.uid.toString();
-    let user = firebase.auth().currentUser;
-    if (user != null) {
-      return user.uid;
-    }
-    return '';
+  // async getUid(): Promise<any> {
+  //   // console.log(firebase.auth().currentUser.uid);
+  //   // return firebase.auth().currentUser.uid.toString();
+  //   const user = await firebase.auth().currentUser;
+  //   if (user != null) {
+  //     return user.uid;
+  //   }
+  //   return '';
+  // }
+
+  getUid(): void {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.uid = user.uid;
+      }
+    });
   }
 }

@@ -27,6 +27,7 @@
               "src/assets/css/style.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.js"
             ]
           },
           "configurations": {

@@ -130,17 +130,18 @@
     <button class="schedule__cancel">Hủy bỏ tất cả</button>
   </div>
   <div id="schedule__list" class="schedule__list">
-    <div class="schedule__item schedule__item--sell">
+    <div *ngFor="let order of listOrder" [ngClass]="order.type == 'sell' ? 'schedule__item schedule__item--sell' : 'schedule__item schedule__item--buy'" class="">
       <div class="schedule__summary">
         <div class="schedule__statistics">
-          <div class="schedule__type">Giới hạn bán </div>
+          <div *ngIf="order.type == 'sell'" class="schedule__type">Giới hạn bán </div>
+          <div *ngIf="order.type == 'buy'" class="schedule__type">Giới hạn mua </div>
           <div data-percent="60" data-chart="circle" data-type="sell" class="schedule__chart"></div>
         </div>
         <div class="schedule__description">
-          <div class="schedule__titlte">TRX/USDT</div>
+          <div class="schedule__titlte">{{order.symbolBalance}}</div>
           <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
           </div>
-          <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
+          <div class="schedule__detail"> <span>Giá</span><span>{{order.price}}</span></div>
         </div>
       </div>
       <div class="schedule__handle">
@@ -163,7 +164,7 @@
       </div>
       <div class="schedule__handle">
         <div class="schedule__time">03-17 15:36:26</div>
-        <button class="schedule__cancel">Hủy bỏ</button>
+        <button class="schedule__cancel" (click)="cancel('D4YMBTKBAy9F3m2ByVND')">Hủy bỏ</button>
       </div>
     </div>
   </div>
