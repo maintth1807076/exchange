@@ -18,11 +18,16 @@ import {TradeHistoryComponent} from './order/trade-history/trade-history.compone
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {WalletComponent} from './wallet/wallet.component';
-import {HttpClientModule} from "@angular/common/http";
-import {ReactiveFormsModule} from "@angular/forms";
-import {AngularFireAuthModule} from "@angular/fire/auth";
-import {AngularFirestoreModule} from "@angular/fire/firestore";
-import {AuthService} from "./service/auth.service";
+import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AuthService} from './service/auth.service';
+import { HistoryComponent } from './history/history.component';
+import { WithdrawComponent } from './withdraw/withdraw.component';
+import {FooterComponent} from './common/footer.component';
+import { WithdrawHistoryComponent } from './withdraw-history/withdraw-history.component';
+import { DepositComponent } from './deposit/deposit.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,13 @@ import {AuthService} from "./service/auth.service";
     OpenOrderComponent,
     OrderHistoryComponent,
     TradeHistoryComponent,
-    WalletComponent
+    WalletComponent,
+    HistoryComponent,
+    WithdrawComponent,
+    FooterComponent,
+    FooterComponent,
+    WithdrawHistoryComponent,
+    DepositComponent
   ],
   imports: [
     BrowserModule,

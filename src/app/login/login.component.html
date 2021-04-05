@@ -1,22 +1,24 @@
-<app-header [headerHome]="false"></app-header>
-<section class="form">
-  <div class="container">
-    <form id="login" action="#" [formGroup]="formGroup">
-      <div class="form__header">Đăng nhập</div>
-      <div class="form__group">
-        <label for="email" class="form__label">Email</label>
-        <input id="email" type="email" name="email" required class="form__control" formControlName="email">
-      </div>
-      <div class="form__group">
-        <label for="password" class="form__label">Mật khẩu</label>
-        <input id="password" type="password" name="password" required class="form__control" formControlName="password">
-      </div>
-      <div class="form__handle">
-        <button id="login-button" type="submit" class="form__button" (click)="onSubmit()">Đăng nhập</button>
-      </div>
-      <div class="form__info"> <a href="#" title="Quên mật khẩu?" class="form__link">Quên mật khẩu?</a>
-        <a routerLink="/register" title="Đăng ký" class="form__link">Đăng ký</a></div>
-    </form>
-  </div>
-</section>
-<!--/.form-->
+<div class="wrapper">
+  <app-header [headerHome]="false"></app-header>
+  <section class="form">
+    <div class="container">
+      <form id="login" action="#" [formGroup]="formGroup">
+        <div class="form__header">Đăng nhập</div>
+        <div class="form__group">
+          <label for="email" class="form__label">Email</label>
+          <input id="email" type="email" name="email" required class="form__control" formControlName="email">
+        </div>
+        <div class="form__group">
+          <label for="password" class="form__label">Mật khẩu</label>
+          <input id="password" type="password" name="password" required class="form__control" formControlName="password">
+        </div>
+        <div class="form__handle">
+          <button id="login-button" type="submit" class="form__button" (click)="onSubmit()">Đăng nhập</button>
+        </div>
+        <div class="form__info"> <a href="#" title="Quên mật khẩu?" class="form__link">Quên mật khẩu?</a>
+          <a routerLink="/register" title="Đăng ký" class="form__link">Đăng ký</a></div>
+      </form>
+    </div>
+  </section>
+  <!--/.form-->
+</div>

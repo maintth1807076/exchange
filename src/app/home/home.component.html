@@ -1,1 +1,539 @@
-<h1>Home page</h1>
+<div class="site-wrapper">
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="header-user">
+            <nav class="navbar">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action 1</a>
+                    <a class="dropdown-item" href="#">Action 2</a>
+                    <a class="dropdown-item" href="#">Action 3</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+
+            </nav>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="header-action d-flex justify-content-end">
+            <div class="haeder-item main-header-search ">
+              <a class="btn-header btn-header-search-toggle" href="#" title="Main search">
+                <i class="fas fa-search"></i>
+              </a>
+
+            </div>
+            <div class="haeder-item header-scan-code">
+              <a class="btn-header" href="#" title="Scan code">
+                <i class="fas fa-qrcode"></i>
+              </a>
+            </div>
+            <div class="haeder-item header-user-message">
+              <a class="btn-header" href="#" title="User message">
+                <i class="fas fa-bell"></i>
+                <span class="message-count">99+</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row home-header-search" style="display: none;">
+        <div class="col col-12">
+          <form class="header-search" action="#">
+            <div class="input-group">
+              <input type="search" id="form1" class="form-control" placeholder="Hãy nhập từ khóa" />
+              <button type="button" class="btn btn-primary btn-search-submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="app-coin-hero">
+      <div class="container hero-wrap">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="assets/images/hero-banner-1.jpg" alt="Hero banner 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/hero-banner-2.jpg" alt="Hero banner 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/hero-banner-1.jpg" alt="Hero banner 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/hero-banner-2.jpg" alt="Hero banner 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/hero-banner-1.jpg" alt="Hero banner 1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/hero-banner-2.jpg" alt="Hero banner 2">
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
+
+    </section>
+
+    <div class="alert-toolbar">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <i class="fas fa-bullhorn"></i>
+          <span class="alert-title">Binance Staking triển khai chương trình Staking ROSE..</span>
+          <i class="fas fa-list"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block-content coin-charts">
+      <div class="container">
+        <div class="row">
+          <div class="col col-4 chart-item">
+            <div class="chart-heading">
+              <div class="sub-heading">
+                <div class="sub-heading-title">
+                  BNB/BUSD
+                </div>
+                <div class="percent-content content-up">
+                  +1,20%
+                </div>
+              </div>
+              <div class="main-heading">
+                346,6758
+              </div>
+            </div>
+            <div class="chart-content">
+              <div class="chartBox">
+                <canvas id="BNBAreaChartDom" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div> <!-- End chart item -->
+          <div class="col col-4 chart-item">
+            <div class="chart-heading">
+              <div class="sub-heading">
+                <div class="sub-heading-title">
+                  BTC/BUSD
+                </div>
+                <div class="percent-content content-down">
+                  -0,14%
+                </div>
+              </div>
+              <div class="main-heading content-up">
+                59.309,03
+              </div>
+            </div>
+            <div class="chart-content">
+              <div class="chartBox">
+                <canvas id="BTCAreaChartDom" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div> <!-- End chart item -->
+          <div class="col col-4 chart-item">
+            <div class="chart-heading">
+              <div class="sub-heading">
+                <div class="sub-heading-title">
+                  ETH/BUSD
+                </div>
+                <div class="percent-content content-up">
+                  +4,95%
+                </div>
+              </div>
+              <div class="main-heading content-up">
+                2.099,82
+              </div>
+            </div>
+            <div class="chart-content">
+              <div class="chartBox">
+                <canvas id="ETHAreaChartDom" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div> <!-- End chart item -->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section-block-content coin-earn">
+      <div class="container">
+        <div class="coin-earn-wrap">
+          <div class="row">
+            <div class="col col-8 col-sm-9 d-flex align-items-center">
+              <div>
+                <h3 class="coin-earn-title">Binance Earn</h3>
+                <p class="coin-earn-description">Giải pháp đầu tư tất cả trong một</p>
+              </div>
+            </div>
+            <div class="col col-4 col-sm-3">
+              <img src="assets/images/coin-earn-image.png" alt="Binance Earn">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block-content chart-table">
+      <div class="container">
+        <div class="block-heading">
+          <h3 class="block-heading-title">Bảng xếp hạng</h3>
+        </div><!-- end block heading -->
+        <div class="block-content">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="popular-tab" data-toggle="tab" href="#popular" role="tab"
+                 aria-controls="popular" aria-selected="true">Phổ biến</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="priceUp-tab" data-toggle="tab" href="#priceUp" role="tab"
+                 aria-controls="priceUp" aria-selected="false">Tăng giá</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="priceDown-tab" data-toggle="tab" href="#priceDown" role="tab"
+                 aria-controls="priceDown" aria-selected="false">Giảm giá</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="kl24h-tab" data-toggle="tab" href="#kl24h" role="tab" aria-controls="kl24h"
+                 aria-selected="false">KL 24h</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="popular" role="tabpanel" aria-labelledby="popular-tab">
+              <div class="coin-price-table">
+                <div class="table-heading d-flex align-items-start">
+                  <div class="coin-name-heading">Cặp</div>
+                  <div class="price-last-update-heading">Giá gần nhất</div>
+                  <div class="change-24h-heading">Thay đổi 24h</div>
+                </div>
+                <div class="table-content">
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-down">
+                        -11,59%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        WIN
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /USDT
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        0,000092980
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +60,83%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +4,95%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                </div>
+              </div>
+              <!-- End coin-price-table -->
+            </div>
+            <div class="tab-pane" id="priceUp" role="tabpanel" aria-labelledby="priceUp-tab">
+              <div class="coin-price-table">
+                <div class="table-heading d-flex align-items-start">
+                  <div class="coin-name-heading">Cặp</div>
+                  <div class="price-last-update-heading">Giá gần nhất</div>
+                  <div class="change-24h-heading">Thay đổi 24h</div>
+                </div>
+                <div class="table-content">
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-down">
+                        -11,59%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        WIN
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /USDT
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        0,000092980
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +60,83%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +4,95%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                </div>
+              </div>
+              <!-- End coin-price-table -->
+            </div>
+
+            <div class="tab-pane" id="priceDown" role="tabpanel" aria-labelledby="priceDown-tab">
+              <div class="coin-price-table">
+                <div class="table-heading d-flex align-items-start">
+                  <div class="coin-name-heading">Cặp</div>
+                  <div class="price-last-update-heading">Giá gần nhất</div>
+                  <div class="change-24h-heading">Thay đổi 24h</div>
+                </div>
+                <div class="table-content">
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-down">
+                        -11,59%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        WIN
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /USDT
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        0,000092980
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +60,83%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +4,95%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                </div>
+              </div>
+              <!-- End coin-price-table -->
+            </div>
+
+            <div class="tab-pane" id="kl24h" role="tabpanel" aria-labelledby="kl24h-tab">
+              <div class="coin-price-table">
+                <div class="table-heading d-flex align-items-start">
+                  <div class="coin-name-heading">Cặp</div>
+                  <div class="price-last-update-heading">Giá gần nhất</div>
+                  <div class="change-24h-heading">Thay đổi 24h</div>
+                </div>
+                <div class="table-content">
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-down">
+                        -11,59%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        WIN
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /USDT
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        0,000092980
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +60,83%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                  <div class="coin-row d-flex align-items-start">
+                    <div class="coin-name">
+                      <div class="coin-name-title">
+                        FIL
+                      </div>
+                      <div class="coin-name-sub content-up">
+                        /BUSD
+                        <span class="icon-status"><i class="fab fa-gripfire"></i></span>
+                      </div>
+                    </div>
+                    <div class="price-last-update">
+                      <div class="price">
+                        173,8819
+                      </div>
+                    </div>
+                    <div class="change-24h">
+                      <div class="btn-percent-content content-up">
+                        +4,95%
+                      </div>
+                    </div>
+                  </div> <!-- End coin row -->
+                </div>
+              </div>
+              <!-- End coin-price-table -->
+            </div>
+          </div>
+        </div>
+      </div><!-- end block content -->
+    </div>
+
+  </main>
+  <app-footer></app-footer>
+</div>

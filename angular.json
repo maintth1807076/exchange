@@ -24,10 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/style.css"
+              "src/assets/css/style.css",
+              "src/assets/css/style2.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.js"
             ]
           },
           "configurations": {

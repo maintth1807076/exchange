@@ -1,0 +1,110 @@
+<div class="site-wrapper single-coin">
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="col col-3 d-flex align-items-center justify-content-start">
+          <a routerLink="/home" class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="col col-6">
+          <h1 class="header-ttile text-center">Nạp</h1>
+        </div>
+        <div class="col col-3 d-flex align-items-center justify-content-end">
+          <a routerLink="/history" class="btn-history"><i class="fas fa-history"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="section-block-content single-coin-info">
+      <div class="container">
+        <div class="block-heading">
+          <div class="row">
+            <div class="col col-9 d-flex align-items-center">
+              <h3 class="block-heading-title">
+                <a href="withdraw.html">
+                  <img src="assets/images/choose-investment-packages-label-inactive-bg.png" alt="">
+                  <label for="">TRX</label>
+                </a>
+              </h3>
+            </div>
+            <div class="col col-3 d-flex align-items-center justify-content-end">
+              <a href="withdraw.html" class="btn-history"><i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div><!-- end block heading -->
+      </div>
+    </div>
+
+    <div class="section-block-content select-coin-type">
+      <div class="container">
+        <div class="block-heading">
+          <h3 class="block-heading-title">Chọn mạng lưới</h3>
+        </div><!-- end block heading -->
+        <div class="block-content">
+          <div class="button-list select-network ">
+            <button class="btn-network-item">TRC20</button>
+            <button class="btn-network-item">BEF</button>
+            <button class="btn-network-item">ERC20</button>
+          </div>
+        </div><!-- end block content -->
+      </div>
+      <div class="container">
+        <div class="block-heading">
+          <div class="row">
+            <div class="col col-8">
+              <h3 class="block-heading-title">TRX Địa chỉ nạp</h3>
+              <p id="copyaddress" class="address-recharge-money">TRXakhdfs46546546jkafhasjkf</p>
+            </div>
+            <div class="col col-4">
+              <a class="click-to-copy-address" onclick="copyToClipboard('#copyaddress')" href="javascript:void(0)">
+                Sao chép địa chỉ
+              </a>
+            </div>
+          </div>
+        </div><!-- end block heading -->
+        <script>
+          function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).html()).select();
+            document.execCommand("copy");
+            alert('Copy thành công');
+            $temp.remove();
+          }
+        </script>
+        <div class="block-content">
+          <div class="qr-code">
+            <div class="qr-code-content">
+              <img src="assets/images/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="">
+            </div>
+            <p class="text-center">
+              <a href="assets/images/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" download ="QR code" class="save-qr-code" title="Lưu mã QR">
+                <i class="fas fa-download"></i> Lưu mã QR
+              </a>
+            </p>
+          </div>
+        </div><!-- end block content -->
+      </div>
+    </div>
+
+    <div class="section-block-content important-note">
+      <div class="container">
+        <div class="block-heading">
+          <h3 class="block-heading-title">Quan trọng</h3>
+        </div><!-- end block heading -->
+        <div class="block-content">
+          <ul>
+            <li>Chỉ gửi TRX đến địa chỉ nạp này. Bạn có thể mất vĩnh viễn tiền nạp nếu gửi các đồng coin hay tocken khác đến địa chỉ này</li>
+            <li>Các đồng coin sẽ được nạp sau lần xác nhận mạng lưới</li>
+          </ul>
+        </div><!-- end block content -->
+
+      </div>
+    </div>
+
+  </main>
+  <app-footer></app-footer>
+</div>

@@ -11,11 +11,12 @@ import {OpenOrderComponent} from './order/open-order/open-order.component';
 import {OrderHistoryComponent} from './order/order-history/order-history.component';
 import {TradeHistoryComponent} from './order/trade-history/trade-history.component';
 import {WalletComponent} from './wallet/wallet.component';
+import {HistoryComponent} from './history/history.component';
+import {WithdrawComponent} from "./withdraw/withdraw.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '', component: LayoutComponent, children: [
-      { path: 'home', component: HomeComponent },
       { path: 'trade', component: TradeComponent },
       { path: 'order', component: OrderComponent, children: [
           { path: 'open-order', component: OpenOrderComponent },
@@ -24,9 +25,12 @@ const routes: Routes = [
         ] }
     ]
   },
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'wallet', component: WalletComponent },
+  { path: 'history', component: HistoryComponent },
+  { path: 'withdraw', component: WithdrawComponent },
 ];
 
 @NgModule({
