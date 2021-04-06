@@ -12,19 +12,25 @@ import {OrderHistoryComponent} from './order/order-history/order-history.compone
 import {TradeHistoryComponent} from './order/trade-history/trade-history.component';
 import {WalletComponent} from './wallet/wallet.component';
 import {HistoryComponent} from './history/history.component';
-import {WithdrawComponent} from "./withdraw/withdraw.component";
+import {WithdrawComponent} from './withdraw/withdraw.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '', component: LayoutComponent, children: [
-      { path: 'trade', component: TradeComponent },
-      { path: 'order', component: OrderComponent, children: [
-          { path: 'open-order', component: OpenOrderComponent },
-          { path: 'order-history', component: OrderHistoryComponent },
-          { path: 'trade-history', component: TradeHistoryComponent }
-        ] }
-    ]
-  },
+  // { path: '', component: LayoutComponent, children: [
+  //     { path: 'trade', component: TradeComponent },
+  //     { path: 'order', component: OrderComponent, children: [
+  //         { path: 'open-order', component: OpenOrderComponent },
+  //         { path: 'order-history', component: OrderHistoryComponent },
+  //         { path: 'trade-history', component: TradeHistoryComponent }
+  //       ] }
+  //   ]
+  // },
+  { path: 'trade', component: TradeComponent },
+  { path: 'order', component: OrderComponent, children: [
+      { path: 'open-order', component: OpenOrderComponent },
+      { path: 'order-history', component: OrderHistoryComponent },
+      { path: 'trade-history', component: TradeHistoryComponent }
+    ] },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
