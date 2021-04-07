@@ -27,7 +27,7 @@ export class TradeComponent implements OnInit, AfterViewInit {
               private httpClient: HttpClient) {
     this.createForm();
     this.symbolBalance = this.getSymbolBalance();
-    this.uid = 'TQugs66otZ775JSMyNnNoAZxKrVMFFuQXH1';
+    this.uid = this.authService.uid;
     this.getListOrder();
   }
 
@@ -99,12 +99,12 @@ export class TradeComponent implements OnInit, AfterViewInit {
   getListOrder(): void {
     this.afs.collection('orders', ref => ref.where('uid', '==', this.uid)
       .where('type', '==', 'sell')
-      .orderBy('created', 'desc')).valueChanges().subscribe(data => {
+      .orderBy('created', 'desc')).valueChanges({idField: 'id'}).subscribe(data => {
       this.listOrder = data;
     });
     this.afs.collection('orders', ref => ref.where('uid', '==', this.uid)
       .where('type', '==', 'buy')
-      .orderBy('created', 'desc')).valueChanges().subscribe(data => {
+      .orderBy('created', 'desc')).valueChanges({idField: 'id'}).subscribe(data => {
       this.listOrder = this.listOrder.concat(data);
     });
   }
@@ -124,5 +124,11 @@ export class TradeComponent implements OnInit, AfterViewInit {
     }).catch(error => {
       console.log(error);
     });
+  }
+
+  cancelAll(): void {
+    for (let order of this.listOrder) {
+      this.cancel(order['id']);
+    }
   }
 }

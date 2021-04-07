@@ -125,9 +125,9 @@
 </section>
 <!--/.exchange-->
 <div class="schedule">
-  <div class="schedule__header"> <span>Lệnh chờ (2)</span><a routerLink="/order/open-order"><span class="material-icons">description</span></a></div>
+  <div class="schedule__header"> <span>Lệnh chờ ({{listOrder.length}})</span><a routerLink="/order/open-order"><span class="material-icons">description</span></a></div>
   <div class="schedule__control"> <a href="#schedule__list" class="schedule__toggle"><span class="material-icons">check_circle </span>Ẩn các cặp khác</a>
-    <button class="schedule__cancel">Hủy bỏ tất cả</button>
+    <button class="schedule__cancel" (click)="cancelAll()">Hủy bỏ tất cả</button>
   </div>
   <div id="schedule__list" class="schedule__list">
     <div *ngFor="let order of listOrder" [ngClass]="order.type == 'sell' ? 'schedule__item schedule__item--sell' : 'schedule__item schedule__item--buy'" class="">
@@ -145,30 +145,12 @@
         </div>
       </div>
       <div class="schedule__handle">
-        <div class="schedule__time">03-17 15:36:26</div>
-        <button class="schedule__cancel">Hủy bỏ</button>
-      </div>
-    </div>
-    <div class="schedule__item schedule__item--buy">
-      <div class="schedule__summary">
-        <div class="schedule__statistics">
-          <div class="schedule__type">Giới hạn mua </div>
-          <div data-percent="0" data-chart="circle" data-type="buy" class="schedule__chart"></div>
-        </div>
-        <div class="schedule__description">
-          <div class="schedule__titlte">TRX/USDT</div>
-          <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
-          </div>
-          <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
-        </div>
-      </div>
-      <div class="schedule__handle">
-        <div class="schedule__time">03-17 15:36:26</div>
-        <button class="schedule__cancel" (click)="cancel('D4YMBTKBAy9F3m2ByVND')">Hủy bỏ</button>
+        <div class="schedule__time">{{order.created | date:'MM-dd HH:mm:ss'}}</div>
+        <button class="schedule__cancel" (click)="cancel(order.id)">Hủy bỏ</button>
       </div>
     </div>
   </div>
-  <div class="schedule__empty"> <span class="material-icons">find_in_page</span><span>Không có lệnh</span></div>
+  <div *ngIf="listOrder.length == 0" class="schedule__empty"> <span class="material-icons">find_in_page</span><span>Không có lệnh</span></div>
 </div>
 <!--/.schedule-->
 <a href="#" data-control="aside" class="aside__cover"></a>

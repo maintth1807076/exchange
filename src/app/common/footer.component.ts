@@ -15,9 +15,9 @@ import { Component, OnInit } from '@angular/core';
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/history">
+                <a class="nav-link" routerLink="/trade">
                   <i class="fas fa-history"></i>
-                  <label for="history">Lịch sử</label>
+                  <label for="history">Trade</label>
                 </a>
               </li>
               <li class="nav-item">
